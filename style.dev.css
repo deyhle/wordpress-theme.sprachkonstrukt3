@@ -1,0 +1,965 @@
+/*
+Theme Name: sprachkonstrukt3
+Theme URI: http://sprachkonstrukt.de
+Author: Ruben Deyhle
+Author URI: http://sprachkonstrukt.de
+Description: The next big step.
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* Web Fonts */ 
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(http://themes.googleusercontent.com/static/fonts/vollkorn/v3/BCFBp4rt5gxxFrX6F12DKnYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Vollkorn Italic'), local('Vollkorn-Italic'), url(http://themes.googleusercontent.com/static/fonts/vollkorn/v3/Oiz0tNwvC-Nd29SBQWfWTL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+@font-face {
+    font-family: 'League Gothic';
+    src: url('League_Gothic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Open Sans', 'Helvetica' sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+img,
+embed,
+object,
+video {
+  	max-width: 100%;
+  	height: auto;
+}
+iframe {
+  	max-width: 100%;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "League Gothic";
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ccc;
+	text-shadow: 2px 2px 0px #000;
+	filter: dropshadow(color=#000, offx=2, offy=2);
+	text-decoration: none;
+	border: 0;
+}
+
+
+
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+	color: #333;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+
+
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	padding-left: 1em;
+	background: #ccc;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+	color: #222;
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #ccc;
+}
+input:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: #fff;
+	text-decoration: none !important;
+	border-bottom: 1px solid #ccc;
+}
+a:hover,
+a:focus,
+a:active {
+	border-bottom-color: #96D321;
+}
+
+a[title=Amazon-Affiliate-Link], a[title=Apple-Affiliate-Link] {
+	border-bottom-style: dashed;
+}
+
+a[title=Amazon-Affiliate-Link]:hover, a[title=Apple-Affiliate-Link]:hover {
+	border-bottom-color: #f28917;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+/* =Structure
+----------------------------------------------- */
+body {
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	background: #000;	
+	color: #ccc;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+body.single,
+body.page {
+	background: #333;
+}
+
+header {
+	background: #000;
+	z-index: 9999;
+}
+
+header h1 {
+	display: inline-block;
+}
+
+header h1 a {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #96D321 !important;	
+	/*text-shadow: 0px 0px 5px #96D321;*/
+}
+
+header.singular {
+	border-bottom: 2px solid #96D321;
+	-webkit-box-shadow: 0px 5px 50px 0px #000000;
+	box-shadow: 0px 5px 50px 0px #000000;
+	position: fixed;
+	top: 0;
+	width: 120%;
+	overflow: hidden;
+}
+header.singular:before {
+	content: "01110011 01110000 01110010 01100001 01100011 01101000 01101011 01101111 01101110 01110011 01110100 01110010 01110101 01101011 01110100 00101110 01100100 01100101  01110011 01110000 01110010 01100001 01100011 01101000 01101011 01101111 01101110 01110011 01110100 01110010 01110101 01101011 01110100 00101110 01100100 01100101  01110011 01110000 01110010 01100001 01100011 01101000 01101011 01101111 01101110 01110011 01110100 01110010 01110101 01101011 01110100 00101110 01100100 01100101  01110011 01110000 01110010 01100001 01100011 01101000 01101011 01101111 01101110 01110011 01110100 01110010 01110101 01101011 01110100 00101110 01100100 01100101";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left; 0;
+	font-family: "Courier", "Courier New", monospace;
+	color: #333;
+	font-size: 0.9em;
+	line-height: 1em;
+	tex st-shadow: 0px 0px 3px #666;
+	filter: dropshadow(color=#333, offx=0, offy=0);
+
+}
+header.singular h1 {
+	line-height: 200%;
+	margin-left: 5%;
+	z-index 10;
+}
+header.singular h1 a {
+	font-size: 300%;
+	border: 0;
+}
+
+header.main {
+	padding: 2em 0;
+}
+
+header.main h1 {
+	line-height: 300%;
+	margin-left: 5%;
+}
+header.main h1 a {
+	font-size: 400%;
+	border: 0;
+}
+
+header.main h2 {
+	display: inline-block;
+	clear: none;
+	margin-left: 15%;
+	font-family: "Vollkorn", "Georgia", serif;
+	font-style: italic;
+	font-size: 1.2em;
+	color: #ccc;
+	text-align: right;
+	text-transform: lowercase;
+}
+
+#primary {
+	clear: both;	
+}
+
+article {
+	padding: 2em 15%;
+	font-size: 1.1em;
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	margin-top: 45px;
+}
+
+.entry_content,
+.entry_meta,
+.entry_commentarea {
+	max-width: 800px;
+	margin: 0 auto;
+	clear: both;
+	padding-bottom: 1em;
+}
+
+article h1 {
+	text-align: center;
+	margin: 5em 0 1em 0;
+	
+}
+
+article h1 a {
+	color: inherit;
+	font-size: 5em;
+	border: 0;
+}
+
+article h2 {
+	margin: .5em 0;
+	font-size: 3em;
+}
+
+article h3 {
+	margin: .5em 0;
+	font-size: 2em;
+}
+
+article h4 {
+	margin: 1em 0;
+	font-size: 1.2em;
+}
+
+
+.entry_content > time {
+	font-family: "Vollkorn", "Georgia", serif;
+	display: block;
+	font-style: italic;
+	text-align: right;
+	padding-top: 6em;
+	color: #888;
+}
+
+.entry_content > time + h1 {
+	margin-top: 2em;
+}
+
+.entry_content > .subtitle {
+    font-family: "Vollkorn", "Georgia", serif;
+    font-style: italic;
+    text-align: center;   
+    margin-bottom: 3em;
+    visibility: hidden;    
+}
+
+.entry_meta a {
+	border: 0;
+}
+
+.dates {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.share {
+	float: right;
+}
+
+.share div {
+	display: inline;
+	margin-right: 8px !important;
+}
+.share .fb-like {
+	position: relative;
+	left: -2px;
+	margin-right: 0px !important;
+}
+.share .flattr {
+	position: relative;
+	top: 1px;
+}
+
+.columns {
+	-webkit-column-count: 2;
+	text-align: justify;
+}
+
+#footer {
+	background: #000;
+	border-top: 2px solid #96D321;
+}
+
+header.main ~ #footer {
+	border: 0;
+}
+
+/* =Color Themes
+----------------------------------------------- */
+.color_white {
+	background-color: #fff;
+	color: #444;
+}
+
+.color_white a {
+	color: #999;
+}
+.color_white h1,
+.color_white h2,
+.color_white h3,
+.color_white h4,
+.color_white h1 a,
+.color_white h2 a,
+.color_white h3 a,
+.color_white h4 a {
+	color: #aaa;
+	text-shadow: 2px 2px 0px #ddd;
+	filter: dropshadow(color=#ddd, offx=2, offy=2);
+}
+	
+.color_black {
+	background-color: #000;´
+}
+
+.color_black a {
+}
+.color_black h1,
+.color_black h2,
+.color_black h3,
+.color_black h4,
+.color_black h1 a,
+.color_black h2 a,
+.color_black h3 a,
+.color_black h4 a {
+	text-shadow: 2px 2px 0px #444;
+	filter: dropshadow(color=#444, offx=2, offy=2);
+}
+
+
+
+/* =Footer Widgets
+----------------------------------------------- */
+
+#footer ul {
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.widget {
+	float:left;
+	width: 18%;
+	padding: 1%;
+}
+
+.widget h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	text-transform: lowercase;
+	color: #96D321;	
+	font-size: 1.5em;
+	letter-spacing: normal;
+}
+
+.better-archives a {
+	border-color: #000;
+}
+.better-archives a:hover {
+	border-color: inherit;
+}
+
+.widget_sprachkonstrukt_relatedfeatured_widget ul {
+	list-style-type: square !important;
+	margin-left: 1.5em !important;
+}
+
+
+.eof {
+	clear:both;
+	display: block;
+	text-indent: -99999px;
+}
+
+/* =Kommentare
+----------------------------------------------- */
+
+.commentlist, 
+.pinglist {
+	margin-left: 0 !important;
+}
+
+.commentlist li.comment, 
+.pinglist li.trackback,
+.pinglist li.pingback {
+	list-style-type: none;
+	
+}
+
+.commentlist li.comment {
+	margin: 2em 0;
+}
+
+.kommentar-avatar {
+	float: left;
+	border: 0;
+}
+
+.kommentar-inhalt {
+	margin-left: 60px;
+}
+
+.kommentar-inhalt p {
+	margin-bottom: 0;
+}
+
+.comment-meta,
+.entry_meta {
+	font-size: .8em;
+	margin-top: 1em;
+}
+.comment-meta > a,
+.comment-author a,
+.entry_meta {
+	color: inherit;
+	border: 0 ;
+}
+
+
+.kommentar-inhalt > .comment-meta,
+.kommentar-inhalt:hover > .comment-meta,
+.entry_meta {
+	-moz-transition:linear 0.1s;
+	-webkit-transition:linear 0.1s;
+	transition:linear 0.1s;
+}
+
+.kommentar-inhalt > .comment-meta,
+.entry_meta{
+	-moz-opacity: 0.2;
+	filter: Alpha(opacity=0.2);
+	opacity: 0.2;
+}
+
+
+.kommentar-inhalt:hover > .comment-meta,
+.entry_meta:hover {
+	-moz-opacity: 1.0;
+	filter: Alpha(opacity=1);
+	opacity: 1.0;
+}
+
+
+.reply {
+	float: right;
+	padding-right: 1em;
+}
+
+#commentform input {
+	margin: 0 1em 1em 0;
+}
+
+
+.legal_notice {
+	font-size: 0.8em;
+}
+
+
+
+/* =Home Page
+----------------------------------------------- */
+
+#primary h1 {
+	text-align: center;
+	margin: 2em 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 3em;
+	
+}
+
+.entry-box {
+	display: block;
+	border: 0;	
+	max-width: 800px;
+	margin: 0 auto 4em auto;
+	text-align: right;
+}
+.entry-box article {
+	
+	min-height: 220px;
+	overflow: hidden;
+	padding: 0;
+	
+	
+	position: relative;
+	margin-top: 0;
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid #33353a;	
+	color: #ccc;
+	
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	
+	border-radius: 2px;
+	text-align: left;
+}
+.entry-box:hover article {
+	border: 5px solid #ccc;	
+}
+.entry-box:hover .entry-date {
+	background: #ccc;
+	border-bottom-color: #ccc;
+	color: #333;
+}
+
+.entry-box .entry-title,
+.entry-box .entry-summary {
+	background: rgba(0,0,0,0.7);
+	display: inline;
+	padding: 0.2em 0.4em;
+	margin: 0;
+	position: absolute;
+}
+
+.entry-box .entry-title {
+	font-family: "League Gothic";
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-shadow: 3px 3px 0px #000;
+	filter: dropshadow(color=#000, offx=3, offy=3);
+	line-height: 1em;
+
+	left: 0;
+	top: 0;
+	
+}
+
+.entry-box .entry-date {
+	font-family: "Vollkorn", "Georgia", serif;
+	font-style: italic;
+	padding: 0 0.5em;
+	margin: 0 5% 0 0;
+	
+	background: #33353a;
+	border-bottom: 1px solid #33353a;
+	
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	
+	border-radius: 3px 3px 0px 0px;
+	
+}
+a.entry-box .entry-date  {
+	color: #ccc;
+}
+.entry-box .entry-summary {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 0.8em;
+	left: 0;
+	bottom: 0;
+}
+
+.entry-box .entry-summary p {
+	margin: 0;
+}
+
+
+
+#ajaxcontentloader {
+	text-align: center;
+} 
+
+#ajaxcontentloader a {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f2f2f), color-stop(.5, #1e1f1f), color-stop(.51, #0c0c0c), to(#000));
+	background: -moz-linear-gradient(top, #2f2f2f, #1e1f1f 50%, #0c0c0c 51%, #000); 
+	background: -o-linear-gradient(top, #2f2f2f, #1e1f1f 50%, #0c0c0c 51%, #000); 
+	background: linear-gradient(top, #2f2f2f, #1e1f1f 50%, #0c0c0c 51%, #000); 
+	 
+	border: 2px solid #202124;
+	border-radius: 10px;
+	padding: 0.5em 1em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#ajaxcontentloader a:hover,
+#ajaxcontentloader a:active {
+	border: 2px solid #6a941c;
+}
+
+#ajaxcontentloader a.loading {
+	opacity: 0.5;
+}
+
+/* header 3d
+header h1 {
+	-webkit-transform: perspective(600px) rotateY(45deg);
+	-webkit-transition: all 0.5s ease-in-out;
+}
+header h1:hover {
+	-webkit-transform: perspective(600px) rotateY(0deg);
+}
+*/
+
+a#fancybox-close,
+a.fancybox {
+	border: 0;
+}
+
+
+/* = MEDIA QUERIES
+-------------------------------------------------------------- */
+
+/* --- smaller screens --- */
+@media screen and (max-width : 1250px) {
+	
+	.widget {
+		width: 23%; /* 4 columns */
+		padding: 1%;
+	}
+	
+	header h2 {
+		margin-left: 4% !important;
+	}
+	
+}
+
+
+/* --- iPad Landscape --- */
+@media screen and (max-width : 1024px) {
+	
+	
+    .widget {
+		width: 31%; /* 3 columns */
+		padding: 1%;
+	}
+	
+	
+	header h2 {
+		width: 90%;
+		text-align: right;
+		margin: 0 10% 0 0 !important;
+	}
+	
+	article {
+		padding: 2em 10%;
+	}
+	
+}
+
+/* --- iPad Portrait --- */
+@media screen and (max-width: 880px) {
+	.widget {
+		width: 48%; /* 2 columns */
+		padding: 1%;
+	}
+	
+	article {
+		padding: 2em 2%;
+	}
+	
+	.entry-box {
+		font-size: 0.9em;
+	}
+	
+}	
+
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width : 620px) {
+	
+	body {
+		font-size: 1.3em;
+	}
+	
+	.widget {
+		float: none;
+		width: 100%;
+		padding: 5%;
+	}
+	
+	header {
+		font-size: 0.8em;
+	}
+	
+	header h1,
+	header h2 {
+		display: block !important;
+		margin: 0 auto !important;
+		width: 100%;
+		text-align: center !important;
+	}
+	
+	
+	.entry-box .entry-title{
+		font-size: 2em;
+	}
+	
+	article h1 a {
+		font-size: 2em;
+	}
+}
+
+/* --- iPhone Portrait --- */
+@media screen and (max-width : 400px) {
+	
+}	
+
