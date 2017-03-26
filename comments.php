@@ -47,7 +47,7 @@
 					 // In Germany, you should consider to use the following and insert a link to your legal notice page.
 						
 						'comment_notes_after' => '
-						<p class="legal_notice">Mit dem Absenden eines Kommentars bestätigst du, die <a href="http://sprachkonstrukt.de/rechtliches/#datenschutz">Datenschutzbestimmungen</a> gelesen und verstanden zu haben.</p>' 
+						<p class="legal_notice">Mit dem Absenden eines Kommentars bestätigst du, die <a href="https://sprachkonstrukt.de/rechtliches/#datenschutz">Datenschutzbestimmungen</a> gelesen und verstanden zu haben.</p>'
 					 
 					  )); ?>
 					  
