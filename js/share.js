@@ -1,5 +1,5 @@
 // Google+ Share
-window.___gcfg = {lang: 'de'};
+/*window.___gcfg = {lang: 'de'};
 
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -27,3 +27,4 @@ window.___gcfg = {lang: 'de'};
   js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+*/
