@@ -47,7 +47,6 @@ if (have_posts()) :
 						
 	
 						
-						<div class="flattr"><?php the_flattr_permalink() ?></div>
 						
 						
 					</div-->
