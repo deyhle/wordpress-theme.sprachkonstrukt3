@@ -37,7 +37,7 @@ if (have_posts()) :
 					<a href="<?php echo get_permalink() ?>" rel="bookmark" title=" <?php the_title(); ?>"><time datetime="<?php the_time('c') ?>"><?php the_modified_time(get_option('date_format')); ?>, <?php the_modified_time(); ?></time></a>
 					
 					</span>
-					<div class="share">
+					<!--div class="share">
 						<div id="fb-root"></div>
 						<div class="fb-like" data-send="false" data-layout="button_count" data-width="82" data-show-faces="false"></div>
 						<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-via="sprachkonstrukt" data-lang="de" data-count="none">Twittern</a></div>
@@ -50,7 +50,7 @@ if (have_posts()) :
 						<div class="flattr"><?php the_flattr_permalink() ?></div>
 						
 						
-					</div>
+					</div-->
 				</footer>
 					
 					<?php comments_template(); ?>
