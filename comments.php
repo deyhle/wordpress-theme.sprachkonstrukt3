@@ -7,17 +7,18 @@
  * @author     	Ruben Deyhle <ruben@sprachkonstrukt.de>
  * @url		   	http://sprachkonstrukt.deyhle-webdesign.com
  */
+/*
 ?>
 <div class="entry_commentarea">
 	<?php	if ( post_password_required() ) : ?>
 				<p><?php _e( 'This post is password protected. Enter the password to view any comments.', 'sprachkonstrukt' ); ?></p>
 		<?php
 				return;
-			endif; ?>
+			endif;*/ ?>
 
 
 
-<?php if ( have_comments() ) : ?>
+<?php /*if ( have_comments() ) : ?>
 				<h2 id="comments">Kommentare</h2>
 				<ul class="pinglist">
 					<?php wp_list_comments('type=pings&callback=sprachkonstrukt_ping'); ?>
@@ -29,11 +30,11 @@
 					<div class="alignleft"><?php previous_comments_link() ?></div>
 					<div class="alignright"><?php next_comments_link() ?></div>
 				</div>
-<?php endif; ?>
+<?php endif; */ ?>
 
 <?php if ( comments_open() ) : ?>
 
-<?php comment_form(	array (
+<?php /*comment_form(	array (
  					'fields'  => apply_filters( 'comment_form_default_fields', array (
  						'author' => '<input id="author" name="author" type="text" value="" placeholder="Name" />',
 						'email' => '<input id="email" name="email" type="email" value="" placeholder="eMail" />',
@@ -49,7 +50,7 @@
 						'comment_notes_after' => '
 						<p class="legal_notice">Mit dem Absenden eines Kommentars bestätigst du, die <a href="https://sprachkonstrukt.de/rechtliches/#datenschutz">Datenschutzbestimmungen</a> gelesen und verstanden zu haben.</p>'
 					 
-					  )); ?>
+					  )); */ ?>
 					  
 					 
 <?php endif; ?>				
