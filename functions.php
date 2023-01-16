@@ -69,10 +69,10 @@ function sprachkonstrukt3_setup() {
 	
 	
 	// register widget for beautiful archive
-	add_action( 'widgets_init', create_function( '', 'register_widget("sprachkonstrukt_archive_widget");' ) );
+	add_action( 'widgets_init', function() { register_widget("sprachkonstrukt_archive_widget"); } );
 	
 	// register widget for related/featured posts
-	add_action( 'widgets_init', create_function( '', 'register_widget("sprachkonstrukt_relatedfeatured_widget");' ) );
+	add_action( 'widgets_init', function() { register_widget("sprachkonstrukt_relatedfeatured_widget"); } );
 	
 	
 	add_action( 'send_headers', 'add_header_xua' );
